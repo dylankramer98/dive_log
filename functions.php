@@ -75,7 +75,7 @@ function addItemToHTML(array $dataFromQuery): string
                 <p>Level ' . $itemFromQuery['level'] . '</p>
                 <p>Equipment ' . $itemFromQuery['equipment'] . '</p>
                 <p>Notes ' . $itemFromQuery['notes'] . '</p>
-                <p>Photo ' . $itemFromQuery['photo'] . '</p> </div>';
+                <p>Photo <img src="' . $itemFromQuery['photo'] . '" alt="image of diving"></p> </div>';
     }
 
     return $result;

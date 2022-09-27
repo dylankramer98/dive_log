@@ -27,7 +27,6 @@ function extract_from_db(PDO $db): array
     $query = $db->prepare('SELECT `dive#`, `location`, `depth`, `type`, `activity`, `temperature`, `visability`, `air`, `weight`, `equipment`, `bottom_time`, `level`, `notes`, `photo` FROM `dives` JOIN `locations` ON `dives` `id` = `dive_location`.`id`;');
     $query->execute();
     return $query->fetchAll();
-
 }
 
 /**
@@ -56,9 +55,8 @@ function addItemToHTML(array $dataFromQuery): string
             (isset($itemFromQuery['bottom_time'])) &&
             (isset($itemFromQuery['level'])) &&
             (isset($itemFromQuery['notes'])) &&
-            (isset($itemFromQuery['photo'])))
-
-
+            (isset($itemFromQuery['photo']))
+        ) {
             $result .=
                 '<div class = "itemContainer">
                 <h2>Dive#: ' . $itemFromQuery['dive#'] . '</h2>
@@ -76,11 +74,10 @@ function addItemToHTML(array $dataFromQuery): string
                 <p>Equipment ' . $itemFromQuery['equipment'] . '</p>
                 <p>Notes ' . $itemFromQuery['notes'] . '</p>
                 <p>Photo <img src="' . $itemFromQuery['photo'] . '" alt="image of diving"></p> </div>';
+        }
     }
 
     return $result;
-
-
 }
 
 /**

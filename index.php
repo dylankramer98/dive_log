@@ -17,7 +17,6 @@ require('functions.php');
         <h1>Dylan's Dive Log</h1>
         <h2>“For most of history, man has had to fight nature to survive; in this century he is beginning to realize that, in order to survive, he must protect it.” ~ Jacques-Yves Cousteau</h2>
     </div>
-
 </div>
 
 <div class="container">

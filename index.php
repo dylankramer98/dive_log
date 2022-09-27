@@ -8,8 +8,8 @@ require('functions.php');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dive_log</title>
-    <link href="normalise.css" type="text/css" rel="stylesheet">
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="css/normalizer.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class="titleBar">
@@ -25,10 +25,7 @@ require('functions.php');
     $db = connect_to_db('diver_log');
     $dives = extract_from_db($db);
     ?>
-
-
 </div>
 </body>
-
 
 </html>

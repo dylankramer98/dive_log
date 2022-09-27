@@ -3,7 +3,6 @@
 /**
  * connects to the database and sets the attribute
  * @param $dbName, the name of the db to connect to
- *
  * @return PDO, the db connection
  */
 

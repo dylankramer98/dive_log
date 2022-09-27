@@ -17,12 +17,16 @@ require('functions.php');
         <h1>Dylan's Dive Log</h1>
         <h2>“For most of history, man has had to fight nature to survive; in this century he is beginning to realize that, in order to survive, he must protect it.” ~ Jacques-Yves Cousteau</h2>
     </div>
+<!--    <div>-->
+<!--        <a href="addNewDives.php">Add more Dives</a>-->
+<!--    </div>-->
 </div>
 
 <div class="container">
     <?php
     $db = connect_to_db('diver_log');
     $dives = extract_from_db($db);
+    echo addItemToHTML($dives);
     ?>
 </div>
 </body>

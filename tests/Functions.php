@@ -4,10 +4,8 @@ require_once '../functions.php';
 use PHPUnit\Framework\TestCase;
 
 // Need this to use PHPUnit
-
 class Functions extends TestCase
 {
-
     //Success test
     public function test_location_GivenValidArrayReturnHTML()
     {
@@ -27,7 +25,7 @@ class Functions extends TestCase
         $input['notes'] = 'fun';
         $input['photo'] = 'url';
         $actual = [$input];
-        $expected =   '<div class = "itemContainer">
+        $expected = '<div class = "itemContainer">
                 <h2>Dive#: ' . $input['dive#'] . '</h2>
                 <p>Location: ' . $input['location'] . '</p>
                 <p>Depth:ft ' . $input['depth'] . '</p>
